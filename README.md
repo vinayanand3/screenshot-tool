@@ -37,7 +37,7 @@ A powerful, feature-rich screen capture tool built with Python and Tkinter. Capt
 
 3. **Run the application**
    ```bash
-   python screenshot.py
+   python main.py
    ```
 
 ## 📦 Dependencies
@@ -113,11 +113,18 @@ The tool automatically detects and supports multiple monitors, allowing you to c
 
 ```
 screenshot-tool/
-├── screenshot.py          # Main application
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── LICENSE               # MIT License
-├── .gitignore           # Git ignore rules
+├── main.py               # Entry point
+├── capture_tool.py       # Main application logic
+├── settings.py           # Configuration management
+├── clipboard.py          # Cross-platform clipboard utilities
+├── magnifier.py          # Magnifier/zoom component
+├── ui_elements.py        # UI components (toolbars, dialogs)
+├── requirements.txt      # Python dependencies
+├── README.md            # This file
+├── LICENSE              # MIT License
+├── .gitignore          # Git ignore rules
+├── assets/              # Application assets
+│   └── icon.png        # Application icon
 └── screenshot_config.json # User settings (auto-generated)
 ```
 

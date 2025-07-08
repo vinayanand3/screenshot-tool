@@ -11,4 +11,4 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Run the application
-python3 screenshot.py 
+python3 main.py 

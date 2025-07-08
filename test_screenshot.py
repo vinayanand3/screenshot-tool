@@ -8,7 +8,7 @@ import sys
 import os
 from unittest.mock import patch, MagicMock
 
-# Add the current directory to the path so we can import screenshot
+# Add the current directory to the path so we can import modules
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 class TestScreenCaptureTool(unittest.TestCase):
@@ -28,8 +28,9 @@ class TestScreenCaptureTool(unittest.TestCase):
         self.pil_patcher = patch('PIL.Image')
         self.mock_pil = self.pil_patcher.start()
         
-        # Import the module after mocking
-        from screenshot import ScreenCaptureTool, ConfigManager
+        # Import the modules after mocking
+        from capture_tool import ScreenCaptureTool
+        from settings import ConfigManager
         
         # Create a mock monitor configuration
         mock_monitor = {
@@ -80,8 +81,8 @@ class TestScreenCaptureTool(unittest.TestCase):
     def test_settings_structure(self):
         """Test that settings have the expected structure"""
         # Create a minimal instance for testing settings
-        with patch('screenshot.messagebox'):
-            with patch('screenshot.mss.mss'):
+        with patch('capture_tool.messagebox'):
+            with patch('capture_tool.mss.mss'):
                 tool = self.ScreenCaptureTool()
                 
                 # Check that essential settings exist

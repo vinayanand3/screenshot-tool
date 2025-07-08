@@ -55,7 +55,7 @@ def create_desktop_shortcut():
             shortcut_path = os.path.join(desktop_path, "Screenshot Tool.bat")
             
             with open(shortcut_path, 'w') as f:
-                f.write(f'@echo off\ncd /d "{os.getcwd()}"\npython screenshot.py\npause')
+                f.write(f'@echo off\ncd /d "{os.getcwd()}"\npython main.py\npause')
             
             print(f"✅ Desktop shortcut created: {shortcut_path}")
             return True

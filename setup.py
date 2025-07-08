@@ -46,7 +46,7 @@ setup(
     install_requires=read_requirements(),
     entry_points={
         "console_scripts": [
-            "screenshot-tool=screenshot:main",
+            "screenshot-tool=main:run_capture_tool",
         ],
     },
     keywords="screenshot, screen capture, annotation, image, tool, gui, tkinter",
